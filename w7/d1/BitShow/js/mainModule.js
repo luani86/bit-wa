@@ -5,21 +5,35 @@
 import {TVShows, Show, createTVShows, createShow} from "./dataModule.js";
 import {printAllShows, printSearchResults,  printSeasons, printCast, showImg, printDescription, printShowName} from "./UIModule.js";
 
+    // const allShowsUrl = 'http://api.tvmaze.com/shows';
+    // $(function () {
+    //     var request = $.get(allShowsUrl);
+    //     request.done(function (response) {
+    //         let allShows = response;
+    //         console.log(allShows);
+    //         let show = createTVShows(allShows);
+    //         printAllShows(show.shows);
+
+          
+   
     const allShowsUrl = 'http://api.tvmaze.com/shows';
-    $(function () {
-        var request = $.get(allShowsUrl);
-        request.done(function (response) {
-            let allShows = response;
-            console.log(allShows);
+    fetch(allShowsUrl) 
+        .then((response) => {
+            return response.json();
+        })
+        .then((jsonResponse) => {
+            let allShows = jsonResponse;
             let show = createTVShows(allShows);
             printAllShows(show.shows);
-
             $(".show-container img").on("click", function (){
                 localStorage.setItem("id", $(this).attr("data-id"));
                 location.href = "infopage.html"; 
             });
-        });
-    });
+        })
+
+        
+    
+
 
     
 
@@ -36,8 +50,8 @@ import {printAllShows, printSearchResults,  printSeasons, printCast, showImg, pr
             attachListeners();
             //console.log(response);
         });
-        // dataModule.createShow(response[0].show.name, response[0].show.image.original, 
-        //     response[0].show.id, response[0].show.summary)
+         dataModule.createShow(response[0].show.name, response[0].show.image.original, 
+             response[0].show.id, response[0].show.summary)
     });
 
 
