@@ -1,7 +1,6 @@
 {
   "name": "memorycheckapp",
   "version": "1.0.0",
-  "description": "",
   "main": "mainModule.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,5 +9,6 @@
   "license": "ISC",
   "dependencies": {
     "figlet": "^1.2.0"
-  }
+  },
+  "description": ""
 }
