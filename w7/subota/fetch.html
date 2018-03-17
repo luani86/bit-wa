@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js" integrity="sha256-L/S5mZS8SPJVWoKym3Zwgf2f3/s3X3MaZ7QBA9HdnN8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <title>Blog App</title>
+</head>
+
+<body>
+    <div class="root">
+
+    </div>
+    <script>
+        fetch("https://randomuser.me/api/?results=10")
+        .then((response) => {
+            return response.json();
+        })
+        .then((json) => {
+            for(let i = 0; i < json.results.length; i++){
+                console.log(json.results[i].login.password)
+            }
+        })
+        
+
+        // let promiseArray = [];
+
+        // for (let i = 0; i < 100; i++) {
+        //     const myPromise = new Promise((resolve, reject) => {
+        //         // myPromise.then(new Date())
+        //         setTimeout(
+        //             resolve(i), Math.floor(Math.random() * 100)
+        //         )
+        //     }).then(function (params) {
+        //         console.log(params);
+        //         return params
+
+        //     });
+        //     promiseArray.push(myPromise);
+        // }
+
+
+        // Promise.all(promiseArray).then(function (params) {
+        //     console.log(params);
+        // });
+    </script>
+    <!-- <script src="post.js"></script>
+    <script src="blog.js" type="text/babel"></script> -->
+</body>
+
+</html>
