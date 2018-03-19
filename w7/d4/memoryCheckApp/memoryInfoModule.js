@@ -16,3 +16,4 @@ const registerForAlerts = (callbackFunction) => {
 }
 
 module.exports.registerForAlerts = registerForAlerts;
+

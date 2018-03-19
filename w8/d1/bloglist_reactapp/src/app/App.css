@@ -1,0 +1,14 @@
+#glavni-naslov {
+  background-color: black;
+  text-align: center; 
+  color: white;
+}
+.podnaslov {
+    background-color: grey;
+    text-align: center;
+}
+#footer {
+    background-color: black;
+    text-align: center; 
+    color: white;
+}

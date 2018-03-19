@@ -1,6 +1,7 @@
 const memoryInfoModule = require('./memoryInfoModule');
+
 var figlet = require("figlet")
-memoryInfoModule.registerForAlerts((message) => {
+memoryInfoModule.registerForAlerts(function (message)  {
     console.log(message);
 });
 // const onLowMemory = function(message){
