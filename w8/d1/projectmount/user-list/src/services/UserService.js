@@ -7,11 +7,7 @@ class UserService {
         })
         .then ((resultResponse) => {
             const userList = resultResponse.results
-            console.log(userList)
-            return userList;
-        })
-        .then((usersFromApi) => {
-            return usersFromApi.map((user) => {
+            return userList.map((user) => {
                 return new User(user);
             })
         })

@@ -4,20 +4,19 @@ import userGrid from "../partials/header"
 
 const Header = (props) => {
     return (
-    <div>
-        
-        <nav>
-        <div className="nav-wrapper">
-          <a href="" className="brand-logo">Bit People</a>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li><a onClick={props.handleChange}>hahahaha</a></li>
-            <li><a href="">sass <span className="new badge">4</span></a></li>
-            <li><a href="">sass</a></li>
-          </ul>
-        </div>
-      </nav>
+    <nav>
+    <div className="nav-wrapper">
+      <a href="#!" className="brand-logo">BIT Persons</a>
+      <ul className="right hide-on-med-and-down">
+      <li><a onClick={props.handleChange}>
+      <i className="material-icons">{ props.isGrid ? "view_list" : "view_module"}</i>
+      </a></li>
+        <li><a href="collapsible.html"><i className="material-icons">refresh</i></a></li>
+      </ul>
     </div>
-    )
+  </nav>
+  )
 };
 
 export default Header;
+

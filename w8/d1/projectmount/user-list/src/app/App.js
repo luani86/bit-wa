@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
           <div>
-            <Header handleChange={this.handleChange}/>
+            <Header handleChange={this.handleChange} isGrid={this.state.selected}/>
             {(this.state.selected) ? <UserGrid items={this.state.users}/> : <UserList items={this.state.users}/>}
             <Footer/>
           </div>
