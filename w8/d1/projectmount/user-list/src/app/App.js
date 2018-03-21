@@ -4,12 +4,12 @@ import Header from './partials/header';
 import Footer from './partials/footer';
 import UserList from './userList/userList';
 import {userService} from './../services/UserService';
-import UserGrid from "./userList/userGrid";
+import UserGrid from "./userList/userGrid"
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selected: false }
+    this.state = { selected: false, users: [] }
   }
 
   handleChange = (event) => {
@@ -18,11 +18,20 @@ class App extends React.Component {
     });
   }
 
+  componentDidMount () {
+    userService.fetchUsers()
+    .then((fetchedusers) => {
+      this.setState({
+        users: fetchedusers
+      })
+    })
+  }
+
   render() {
     return (
           <div>
             <Header handleChange={this.handleChange}/>
-            {(this.state.selected) ? <UserList items={usersData}/> : <UserGrid items={usersData}/>}
+            {(this.state.selected) ? <UserGrid items={this.state.users}/> : <UserList items={this.state.users}/>}
             <Footer/>
           </div>
           )

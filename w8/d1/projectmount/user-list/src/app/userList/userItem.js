@@ -11,11 +11,11 @@ console.log('------------------------------------');
         <ul className="collection">
       
         <li className="collection-item avatar">
-        <img className="material-icons circle" src= {props.item.picture.thumbnail}></img>
+        <img className="material-icons circle" src= {props.item.smallPhoto}></img>
         <span className="title"></span>
-        <p>{props.item.name.first}<br/>
-        {FormatEmail(props.item.email)}<br/>
-        {"Date of birth: " + FormatDate(props.item.dob)}
+        <p>{props.item.firstName}<br/>
+        {props.item.email}<br/>
+        {"Date of birth: " + props.item.bDay}
         </p>
         <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
       </li>
