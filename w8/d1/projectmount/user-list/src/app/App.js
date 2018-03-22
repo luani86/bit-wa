@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import usersData from '../entities/users';
 import Footer from './partials/footer';
-// import UserList from './userList/userList';
-// import {userService} from './../services/UserService';
-// import UserGrid from "./userList/userGrid"
 import {Switch, Route, Redirect} from "react-router-dom"
 import Home from './../entities/home';
 import About from './../entities/about';
+import EmptyPage from './../entities/emptyPage';
 
 class App extends Component{
 
@@ -15,7 +13,9 @@ class App extends Component{
           <div>
             <Switch>
               <Route exact path="/home" component={Home}/>
+              <Redirect exact from="/" to="/home"/>
               <Route exact path="/about" component={About}/>
+              <Route exact path="/emptyPage" component={EmptyPage}/>
             </Switch>
             <Footer/>
           </div>
