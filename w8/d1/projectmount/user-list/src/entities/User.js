@@ -8,7 +8,7 @@ class User {
         this.photo = user.picture.large;
          this.firstName = user.name.first;
          this.email = FormatEmail(user.email);
-         this.bDay = FormatDate(user.dob); 
+         this.bDay =  FormatDate(user.dob); 
          this.smallPhoto = user.picture.thumbnail;
          this.lastName = user.name.last;   
          this.gender = user.gender;

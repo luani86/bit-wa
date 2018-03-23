@@ -11,7 +11,9 @@ const UserItem = (props) => {
                     <img className="material-icons circle" src= {props.item.smallPhoto}></img>
                     <span className="title"></span>
                     <p>{props.item.fullName}<br/>
+                    {<i className="small material-icons">email</i>}
                     {props.item.email}<br/>
+                    {<i className="small material-icons">cake</i>}
                     {"Date of birth: " + props.item.bDay}
                     </p>
                 </li>
