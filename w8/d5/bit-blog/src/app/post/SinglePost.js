@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import BackBtn from '../partials/BackBtn';
 
-const Post = () => {
+const SinglePost = () => {
     return (
         <div>
             <BackBtn/>
@@ -32,5 +32,5 @@ const Post = () => {
     )
 }
 
-export default Post;
+export default SinglePost;
 

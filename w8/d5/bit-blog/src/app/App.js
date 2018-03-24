@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Header from './partials/header/Header';
 import Footer from './partials/footer/Footer';
+import AuthorList from './authorList/AuthorList'
 import About from './about/About'
-import Post from './post/Post'
+import SinglePost from './post/SinglePost'
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
-import Author from './author/Author';
+import AuthorPage from './author/AuthorPage';
+import PostList from './postList/PostList'
 
 class App extends Component {
   render() {
@@ -16,9 +18,11 @@ class App extends Component {
           {/* <Route path="/Home" component={Home} />
           <Redirect exact from="/" to="/Home" />
           <Route path="/Authors" component={AuthorList} /> */}
-          <Route path="/Post" component={Post} />
+          <Route path="/Post" component={SinglePost} />
           <Route path="/About" component={About} />
-          <Route path="/Author" component={Author} />
+          <Route path="/Author" component={AuthorPage} />
+          <Route path="/AuthorList" component={AuthorList} />
+          <Route path="/PostList" component={PostList} />
         </Switch>
         <Footer />
       </div>
