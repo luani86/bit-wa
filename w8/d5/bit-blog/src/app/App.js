@@ -3,6 +3,7 @@ import Header from './partials/header/Header';
 import Footer from './partials/footer/Footer';
 import AuthorList from './authorList/AuthorList'
 import About from './about/About'
+import NewPost from './newPost/newPostPage'
 import SinglePost from './post/SinglePost'
 import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
@@ -18,11 +19,12 @@ class App extends Component {
           {/* <Route path="/Home" component={Home} />
           <Redirect exact from="/" to="/Home" />
           <Route path="/Authors" component={AuthorList} /> */}
-          <Route path="/Post" component={SinglePost} />
+          <Route path="/Post/:postId" component={SinglePost} />
           <Route path="/About" component={About} />
-          <Route path="/Author" component={AuthorPage} />
+          <Route path="/Author/:authorId" component={AuthorPage} />
           <Route path="/AuthorList" component={AuthorList} />
           <Route path="/PostList" component={PostList} />
+          <Route path="/newPostPage" component={NewPost} />
         </Switch>
         <Footer />
       </div>

@@ -24,7 +24,7 @@ class PostList extends Component {
 
                 {this.state.posts.map((post) => (
                     <div key={post.id}>
-                        <h3>{post.title}</h3>
+                        <Link to={"/post/" + post.id} className="nav-item nav-link active"><h3>{post.title}></h3></Link>
                         <p>{post.postContent}</p>
                         <hr/>
                     </div>

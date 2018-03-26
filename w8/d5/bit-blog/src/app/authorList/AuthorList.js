@@ -16,11 +16,11 @@ componentDidMount = () => {
 render = () => {
     return (
         <div>
-            <h2>Authors</h2>
+            <h2>Authors ({this.state.authors.length})</h2>
 
             {this.state.authors.map((author) => (
                 <div key={author.id}>
-                    <Link to="/author" className="nav-item nav-link active"><h3>{author.name}</h3></Link>
+                    <Link to={"/author/" + author.id} className="nav-item nav-link active"><h3>{author.name}</h3></Link>
                     <hr/>
                 </div>
             ))}

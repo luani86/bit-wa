@@ -12,10 +12,9 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav offset-md-9" >
                         <Link to="/PostList" className="nav-item nav-link active">Home </Link>
-                        <Link to="/about" className="nav-item nav-link active">About</Link>
-                        <Link to="/post" className="nav-item nav-link active">Post</Link>
-                        <Link to="/author" className="nav-item nav-link active">Author</Link>
                         <Link to="/authorList" className="nav-item nav-link active">Authors</Link>
+                        <Link to="/newPostPage" className="nav-item nav-link active">New Post</Link>
+                        <Link to="/about" className="nav-item nav-link active">About</Link>
                     </div>
                 </div>
             </nav>
