@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { postsService } from '../../services/postsService'
+import BackBtn from '../partials/BackBtn';
+import FwdBtn from '../partials/FwdBtn';
 
 class PostList extends Component {
     constructor(props) {
@@ -20,6 +22,8 @@ class PostList extends Component {
     render = () => {
         return (
             <div>
+                <BackBtn/>
+                <FwdBtn/>
                 <h2>POSTS</h2>
 
                 {this.state.posts.map((post) => (

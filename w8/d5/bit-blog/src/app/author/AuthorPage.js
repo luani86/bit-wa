@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import BackBtn from '../partials/BackBtn';
+import FwdBtn from '../partials/FwdBtn';
 //import Author from '../../entities/Author';
 import { authorsService } from '../../services/authorsService';
 
@@ -78,6 +79,7 @@ class AuthorPage extends Component {
         return (
             <div>
                 <BackBtn/>
+                <FwdBtn/>
 
                 <div className = "row">
          <div className="col-3.5 offset-1 ">

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import {authorsService} from '../../services/authorsService';
+import BackBtn from '../partials/BackBtn';
+import FwdBtn from '../partials/FwdBtn';
 class AuthorList extends Component {
 constructor(props) {
     super(props);
@@ -16,6 +18,8 @@ componentDidMount = () => {
 render = () => {
     return (
         <div>
+            <BackBtn/>
+            <FwdBtn/>
             <h2>Authors ({this.state.authors.length})</h2>
 
             {this.state.authors.map((author) => (

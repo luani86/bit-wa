@@ -1,0 +1,7 @@
+.fwdBtn {
+    cursor: pointer;
+}
+.fwdBtn:hover {
+    color: blue;
+    text-decoration: underline;
+}

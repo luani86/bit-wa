@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { postsService } from '../../services/postsService';
+import BackBtn from '../partials/BackBtn';
+import FwdBtn from '../partials/FwdBtn';
 
 class NewPost extends Component {
     constructor(props) {
@@ -29,6 +31,8 @@ class NewPost extends Component {
     render() {
         return (
             <div>
+                <BackBtn/>
+                <FwdBtn/>
                 <h1>NEW POST</h1>
                 <form >
                 <h5>Title</h5>

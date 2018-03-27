@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import BackBtn from '../partials/BackBtn';
+import FwdBtn from '../partials/FwdBtn';
 import { postsService } from '../../services/postsService';
 import { authorsService } from '../../services/authorsService';
 
@@ -44,6 +45,8 @@ class SinglePost extends Component {
         console.log(this.state.postsByAuthor)
         return (
             <div>
+                 <BackBtn/>
+                 <FwdBtn/>
                 <h3>{this.state.title}</h3>
                 <Link to={`/author/${this.state.userId}`} className="nav-item nav-link active"><h3>{this.state.name}</h3></Link>
                 <p>{this.state.body}</p>

@@ -1,0 +1,7 @@
+.backBtn {
+    cursor: pointer;
+}
+.backBtn:hover {
+    color: blue;
+    text-decoration: underline;
+}

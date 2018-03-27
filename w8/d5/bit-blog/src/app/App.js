@@ -25,6 +25,7 @@ class App extends Component {
           <Route path="/AuthorList" component={AuthorList} />
           <Route path="/PostList" component={PostList} />
           <Route path="/newPostPage" component={NewPost} />
+          <Redirect from="/" to="/PostList" />
         </Switch>
         <Footer />
       </div>
